@@ -9,7 +9,7 @@ const rateLimit=require('express-rate-limit');
 app.use(requestIp.mw())
 app.use(rateLimit({
     windowMs:600000,
-    max:7,
+    max:100,
     message:{statusCode:200,
         error:"too many request"},
    
