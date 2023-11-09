@@ -23,6 +23,7 @@ const downloadVideo= async function (req, res, next) {
     })
     videoStream.pipe(res)
     }catch(e){
+        console.log(e)
         res.send({"error":"Error occured while downloading "})
     }
 }
